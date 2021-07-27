@@ -1,0 +1,47 @@
+#Program for Estimating Renewals and Drops by Interactions
+
+import random
+import sys
+
+
+# These variables keep track of the number of renwals and drops
+Renewals = 0
+Drops = 0
+
+while True:
+    print('Number of Renewals:', Renewals)
+    print('Number of Drops:', Drops)
+    print('Enter # of interactions with partner over the past year')
+    i=input()
+    r=random.randint(1,10)
+    if i=='q': #This is the command for exiting the loop
+        sys.exit()
+    elif int(i)==0: #0 interactions, 30% chance of renewal
+        if r<=3:
+            print('Renewal')
+            Renewals=Renewals+1
+        else:
+            print('Drop')
+            Drops=Drops+1
+    elif int(i==1) | int(i==2): #1-2 interactions, 50% chance of renewal
+        if r<=5:
+            print('Renewal')
+            Renewals=Renewals+1
+        else:
+            print('Drop')
+            Drops=Drops+1
+    elif int(i==3) | int(i==4): #3-4 interactions, 70% chance of renewal
+        if r<=7:
+            print('Renewal')
+            Renewals=Renewals+1
+        else:
+            print('Drop')
+            Drops=Drops+1
+    else: #5+ interactions, 90% chance of renewal
+        if r<=9: 
+            print('Renewal')
+            Renewals=Renewals+1
+        else:
+            print('Drop')
+            Drops=Drops+1
+               
